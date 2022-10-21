@@ -1,0 +1,16 @@
+// Переменные и миксины
+@import "vars/layouts_v.scss";
+@import "vars/colors_v.scss";
+@import "base/mixins.scss";
+// Общие
+@import "base/normalize.scss";
+@import "typecolors/fonts.scss";
+@import "base/global.scss";
+@import "layouts/container-fluid.scss";
+@import "layouts/hidden.scss";
+// @import "other/outlines.scss";
+// Блоки и элементы сайта (без компонентов и PUG)
+@import "blocks/blocks.scss";
+// Блоки и элементы сайта (с компонентами и PUG)
+// @import "../blocks/blocks.scss";
+// @import "../elements/elements.scss";
