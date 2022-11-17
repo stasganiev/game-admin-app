@@ -45,7 +45,10 @@ html {
   --bg-unanaible-plasce: #dddddd;
 
   --input-border-color: #888888;
-  --input-border-color-active: #333333;
+  --input-border-color-active: #ea3232;
+
+  --border-radius: 4px;
+  --border-radius-btn: 3px;
 
   height: 100%;
 }
@@ -93,6 +96,64 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/*/ //////////////////////////
+// UI Kit
+// /////////////////////////*/
+
+.btn {
+  appearance: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  text-align: center;
+
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  transition: 0.25s ease-out;
+}
+
+.button-with-picture {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-btn);
+}
+
+.picture-button {
+  width: 25px;
+  height: 25px;
+  border-radius: var(--border-radius-btn);
+}
+
+.button-with-picture_tiny {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius-btn);
+}
+
+.picture-button_tiny {
+  width: 15px;
+  height: 15px;
+  border-radius: var(--border-radius-btn);
 }
 
 /*/ //////////////////////////
@@ -149,9 +210,13 @@ a {
 .main-area {
   padding: 10px;
 
-  border-radius: 3px;
+  border-radius: var(--border-radius);
   background-color: var(--bg-color-workspace);
   box-shadow: 2px 2px 5px 2px rgba(34, 60, 80, 0.2);
+}
+
+.main-area__navigation {
+  padding: 12px;
 }
 
 .footer {
@@ -216,7 +281,7 @@ a {
   padding: 5px 10px;
   padding-right: 25px;
 
-  border-radius: 3px;
+  border-radius: var(--border-radius-btn);
   border-width: 1px;
   outline: none;
 
@@ -228,7 +293,7 @@ a {
 
 .search__input,
 .search__input::placeholder {
-  font-size: 12px;
+  font-size: 0.85em;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
@@ -248,22 +313,6 @@ a {
   border-color: var(--input-border-color-active);
 }
 
-.button-with-picture {
-  display: block;
-  width: 26px;
-  height: 26px;
-
-  cursor: pointer;
-  border: none;
-  border-radius: 3px;
-}
-
-.picture-button {
-  width: 25px;
-  height: 25px;
-  border-radius: 3px;
-}
-
 .search__button {
   position: absolute;
   top: 2px;
@@ -279,3 +328,62 @@ a {
 /*/ //////////////////////////
 // Navigation
 // /////////////////////////*/
+
+.menu {
+  margin-bottom: 22px;
+  padding: 13px;
+  /* border: rgba(136, 136, 136, 0.3) 1px dotted; */
+  border-radius: var(--border-radius);
+}
+
+.menu__title-wrap,
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu__title-wrap {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+
+  border-bottom: rgba(136, 136, 136, 0.3) 1px dotted;
+}
+
+.menu__title {
+  font-size: 0.85em;
+}
+
+.menu-item {
+  margin-bottom: 5px;
+}
+
+.menu__title-btn {
+  position: relative;
+}
+
+.menu__title-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1px;
+
+  width: 8px;
+  height: 2px;
+  background-color: var(--input-border-color);
+
+  transform: rotate(-45deg);
+}
+
+.menu__title-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1px;
+
+  width: 8px;
+  height: 2px;
+  background-color: var(--input-border-color);
+
+  transform: rotate(45deg);
+}
