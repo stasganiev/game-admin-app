@@ -358,11 +358,12 @@ a {
   margin-bottom: 5px;
 }
 
-.menu__title-btn {
+.menu__toggle-btn {
   position: relative;
 }
 
-.menu__title-btn::before {
+.menu__toggle-btn::before,
+.menu-js-opened .menu__toggle-btn::before {
   content: "";
   position: absolute;
   top: 0;
@@ -373,9 +374,11 @@ a {
   background-color: var(--input-border-color);
 
   transform: rotate(-45deg);
+  transition: all 0.4s ease-in-out;
 }
 
-.menu__title-btn::after {
+.menu__toggle-btn::after,
+.menu-js-opened .menu__toggle-btn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -386,4 +389,21 @@ a {
   background-color: var(--input-border-color);
 
   transform: rotate(45deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-js-closed .menu__toggle-btn::before {
+  transform: rotate(45deg);
+}
+
+.menu-js-closed .menu__toggle-btn::after {
+  transform: rotate(-45deg);
+}
+
+.menu-js-opened .menu__list-wrap {
+  display: block;
+}
+
+.menu-js-closed .menu__list-wrap {
+  display: none;
 }
