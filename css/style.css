@@ -267,9 +267,6 @@ a {
   margin-right: 6px;
 }
 
-.main-title__account {
-}
-
 .search__wrap {
   position: relative;
   display: flex;
@@ -374,7 +371,7 @@ a {
   background-color: var(--input-border-color);
 
   transform: rotate(-45deg);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .menu__toggle-btn::after,
@@ -389,7 +386,7 @@ a {
   background-color: var(--input-border-color);
 
   transform: rotate(45deg);
-  transition: all 0.4s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 .menu-js-closed .menu__toggle-btn::before {
